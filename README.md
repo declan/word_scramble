@@ -18,6 +18,8 @@ Or install it yourself as:
 
     $ gem install word_scramble
 
+This has been tested on Ubuntu and OS X.
+
 ## Usage
 
 You can use it from the command line, like this
