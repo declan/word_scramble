@@ -8,8 +8,8 @@ describe WordScramble::Descrambler do
     descrambled.should include("hello")
   end
 
-  it "descrambles valesages" do
-    @scrambled = "valesages"
+  it "descrambles valesags" do
+    @scrambled = "valesags"
     descrambled.should include("salvages")
   end
 
