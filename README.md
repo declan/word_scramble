@@ -25,9 +25,10 @@ You can use it from the command line, like this
     descramble <word>
 
 Or you can call the Descrambler library directly
-
-    descrambler = WordScramble::Descrambler.new("realapin")
-    descrambler.matching_words # => ["airplane", ... ]
+```ruby
+descrambler = WordScramble::Descrambler.new("realapin")
+descrambler.matching_words # => ["airplane", ... ]
+```
 
 ## Contributing
 
