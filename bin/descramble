@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+require 'word_scramble'
+
+if ARGV.empty?
+  puts "Usage: ./descramble <word>"
+  exit
+end
+
+descrambler = WordScramble::Descrambler.new(ARGV.first)
+descrambler.matching_words.each do |word|
+  puts word
+end
