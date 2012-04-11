@@ -2,7 +2,7 @@
 require File.expand_path('../lib/word_scramble/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["declan"]
+  gem.authors       = ["Declan Frye"]
   gem.email         = ["deckleberryfrye@gmail.com"]
   gem.description   = %q{Take a string of scrambled characters and find all the words that can be made from those characters.}
   gem.summary       = %q{Written to solve the Word Scramble game that they give out on Virgin Airlines when the flight is delayed.}
