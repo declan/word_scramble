@@ -20,7 +20,14 @@ require "word_scramble/version"
 #   descrambler.matching_words  # => ["airplane", ... ]
 
 module WordScramble 
-  DICTIONARY_PATH = '/etc/dictionaries-common/words'
+  DICTIONARY_PATH = if File.exists?('/etc/dictionaries-common/words')
+      '/etc/dictionaries-common/words'
+    elsif File.exists?('/usr/share/dict/words')
+      '/usr/share/dict/words'
+    else
+      raise "no dictionary file found"
+    end
+
   DICTIONARY = File.open(DICTIONARY_PATH) do |f|
     dictionary = []
     f.each_line do |line|

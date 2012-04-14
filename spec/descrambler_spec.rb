@@ -8,11 +8,6 @@ describe WordScramble::Descrambler do
     descrambled.should include("hello")
   end
 
-  it "descrambles valesags" do
-    @scrambled = "valesags"
-    descrambled.should include("salvages")
-  end
-
   it "descrambles liopt" do
     @scrambled = "liopt"
     descrambled.should include("pilot")
@@ -25,7 +20,7 @@ describe WordScramble::Descrambler do
 
   it "orders the matching words by length" do
     @scrambled = "liopt"
-    descrambled.first.should == "pilot"
+    descrambled.first.downcase.should == "pilot"
   end
 
 end
