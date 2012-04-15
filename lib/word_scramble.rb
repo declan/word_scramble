@@ -28,7 +28,7 @@ module WordScramble
       raise "no dictionary file found"
     end
 
-  DICTIONARY = File.open(DICTIONARY_PATH) do |f|
+  DICTIONARY = File.open(File.expand_path('../dictionary.txt', __FILE__)) do |f|
     dictionary = []
     f.each_line do |line|
       dictionary.push(line.strip)
