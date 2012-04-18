@@ -18,5 +18,4 @@ tmp
 .rvmrc
 .rspec
 time.rb
-time
 time/*
