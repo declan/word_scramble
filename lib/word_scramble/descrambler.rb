@@ -13,7 +13,7 @@ class WordScramble::Descrambler
   end
 
   def descramble
-    WordScramble::DICTIONARY.each do |word|
+    WordScramble::DICTIONARY[@scrambled_word.length].each do |word|
       if @scrambled_word.can_make?(word)
         @matching_words.push(word)
       end

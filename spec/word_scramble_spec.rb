@@ -1,11 +1,20 @@
 require 'spec_helper'
 
 describe WordScramble do
-  it "has a Dictionary" do
-    WordScramble::DICTIONARY.count.should be > 80000
-  end
 
-  it "has some common words in the dictionary" do
-    WordScramble::DICTIONARY.should include("porridge")
+  describe "Dictionary" do
+    let(:d) { WordScramble::DICTIONARY }
+    it "contains hello" do
+      d[5].should include("hello")
+    end
+
+    it "contains fox" do
+      d[3].should include("fox")
+    end
+
+    it "contains willow" do
+      d[6].should include("willow")
+    end
+
   end
 end

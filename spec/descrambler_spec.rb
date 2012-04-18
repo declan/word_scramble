@@ -18,9 +18,9 @@ describe WordScramble::Descrambler do
     descrambled.should include("airplane")
   end
 
-  it "orders the matching words by length" do
+  it "only returns words of the same length as the scrambled string" do
     @scrambled = "liopt"
-    descrambled.first.downcase.should == "pilot"
+    descrambled.select { |word| word.length != @scrambled.length }.should be_empty
   end
 
 end

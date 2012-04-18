@@ -12,5 +12,9 @@ describe WordScramble::ScrambledWord do
       sw.can_make("hooligans").should == false
     end
 
+    it "knows how longs it is" do
+      sw.length.should == "valesags".length
+    end
+
   end
 end

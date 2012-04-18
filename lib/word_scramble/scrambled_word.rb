@@ -8,6 +8,10 @@ class WordScramble::ScrambledWord
     WordChecker.new(@scrambled_word, word).matches?
   end
 
+  def length
+    @scrambled_word.length
+  end
+
   alias_method :can_make?, :can_make
 
   class WordChecker

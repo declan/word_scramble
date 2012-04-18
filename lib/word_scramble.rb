@@ -7,10 +7,10 @@ require "word_scramble/version"
 # A game played in the Virgin Airlines waiting lounge.
 #
 # Input is a scrambled string.
-# You try to make a word (or words) from those letters.
+# You try to make a word from those letters.
 #
 # ===== Examples
-#   "valesages" => "las vegas"
+#   "rnmteial" => "terminal"
 #   "realapin" => "airplane"
 #   "liopt" => "pilot"
 #
@@ -21,9 +21,12 @@ require "word_scramble/version"
 
 module WordScramble 
   DICTIONARY = File.open(File.expand_path('../dictionary.txt', __FILE__)) do |f|
-    dictionary = []
+    dictionary = {}
     f.each_line do |line|
-      dictionary.push(line.strip)
+      word = line.strip
+      length = word.length
+      dictionary[length] ||= []
+      dictionary[length].push(word)
     end
     dictionary
   end
