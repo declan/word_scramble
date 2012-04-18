@@ -19,3 +19,4 @@ tmp
 .rspec
 time.rb
 time
+time/*
