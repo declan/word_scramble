@@ -17,7 +17,7 @@ require "word_scramble/version"
 # ==== Usage
 #
 #   descrambler = WordScramble::Descrambler.new("realapin")
-#   descrambler.matching_words  # => ["airplane", ... ]
+#   descrambler.matching_words  # => ["airplane"]
 
 module WordScramble 
   DICTIONARY = File.open(File.expand_path('../dictionary.txt', __FILE__)) do |f|
@@ -34,3 +34,4 @@ end
 
 require File.expand_path('../word_scramble/scrambled_word', __FILE__)
 require File.expand_path('../word_scramble/descrambler', __FILE__)
+require File.expand_path('../word_scramble/letter_frequency', __FILE__)

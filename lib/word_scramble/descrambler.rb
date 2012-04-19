@@ -13,13 +13,21 @@ class WordScramble::Descrambler
   end
 
   def descramble
-    WordScramble::DICTIONARY[@scrambled_word.length].each do |word|
+    same_length_words.each do |word|
       if @scrambled_word.can_make?(word)
         @matching_words.push(word)
       end
     end
     @matching_words.sort! { |a,b| b.length <=> a.length }
     @already_descrambled = true
+  end
+
+  def same_length_words
+    if WordScramble::DICTIONARY[@scrambled_word.length].nil?
+      []
+    else
+      WordScramble::DICTIONARY[@scrambled_word.length]
+    end
   end
 
 end

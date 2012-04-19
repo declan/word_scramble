@@ -7,6 +7,9 @@ if ARGV.empty?
 end
 
 descrambler = WordScramble::Descrambler.new(ARGV.first)
+
+puts "no matches" if descrambler.matching_words.empty?
+
 descrambler.matching_words.each do |word|
   puts word
 end
