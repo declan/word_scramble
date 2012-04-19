@@ -29,8 +29,8 @@ You can use it from the command line, like this
 Or you can call the Descrambler library directly
 
 ```ruby
-descrambler = WordScramble::Descrambler.new("realapin")
-descrambler.matching_words # => ["airplane", ... ]
+descrambler = WordScramble::Descrambler.new("liopts")
+descrambler.matching_words # => ["pilots", "spoilt", "pistol"]
 ```
 
 ## Contributing
