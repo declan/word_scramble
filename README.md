@@ -40,3 +40,7 @@ descrambler.matching_words # => ["pilots", "spoilt", "pistol"]
 3. Commit your changes (`git commit -am 'Added some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## Some other section
+
+This is just to see how Tower works.
