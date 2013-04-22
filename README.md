@@ -1,4 +1,4 @@
-# WordScramble
+# Word Scramble
 
 This gem is for generating real words from scrambled strings.
 I wrote it to solve a puzzle that they passed out in the Virgin
